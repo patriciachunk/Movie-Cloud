@@ -1,0 +1,29 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+ 
+}
+
+p, li {
+  font-size: 16px;  
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+html {
+  background-color:	#E8E8E8 ;
+}
+
+body {
+  width: 600px;
+  margin: 1 auto;
+  background-color: #CCCCFF ;
+  padding: 0 20px 20px 20px;
+  border: 5px solid #9966FF ;
+}
