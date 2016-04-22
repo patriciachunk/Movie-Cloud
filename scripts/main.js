@@ -1,1 +1,0 @@
-var myHeading = document.querySelector
