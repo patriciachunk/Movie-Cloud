@@ -1,0 +1,16 @@
+<p>
+EMAIL: <%= user.USERID %><br/>
+Username: <%= user.USERNAME %><br/>
+</p>
+
+<% if (videos) { %>
+<ul>
+	<% for(var i in videos) {%>
+	   <li><a href = '/edit?path=<%= videos[i].PATH %>'>Edit <%= videos[i].TITLE %></li>
+	   <li><a href = '/video?path=<%= videos[i].PATH %>'>View <%= videos[i].TITLE %></li>
+	   </br>
+	<% } %>
+</ul>
+<% } %>
+
+<a href="/logout">Log out</a>

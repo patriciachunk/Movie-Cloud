@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MovieCloud p1</title>
+
+<script type="text/javascript" src="ejs_production.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+  <div class="pen-title">
+  <h1>Movie Cloud</h1>
+  </div>
+
+  <div class="container">
+	<% if (!user) { %>
+		<p>If you are an instructor, please sign in <a href="/login">here</a></p>
+	<% } else { %>
+		<p>Hello, <%= user.USERNAME %>. View your <a href="/profile">profile</a>.</p>
+	<% } %>
+   </div>
+  
+  <% if (videos) { %>
+  <form>List of movies</form>
+	<ul>
+		<% for(var i in videos) {%>
+		   <li>
+		   <a href = '/video?path=<%= videos[i].PATH %>'>View <%= videos[i].TITLE %>
+		   <p> By <%= videos[i].USERID %> </p>
+		   </li>
+		   </br>
+		<% } %>
+	</ul>
+  <% } %>   
+  </ul>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

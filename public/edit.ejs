@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MovieCloud</title>
+   
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  	  <div class="pen-title">
+    <h1>Edit video</h1>
+    </div>
+
+ <form action="/edit?path=<%= path %>" 
+ 	method = "post">
+	Title: 
+	<input type="text" name="title" size="10">
+	Description
+	<input type="text" name="description" size="40">
+	<div>
+		<input type="submit" value="Edit Video" name="submit"/>
+	</div>
+</form>
+
+
+
+
+
+
+
+  </body>
+</html>

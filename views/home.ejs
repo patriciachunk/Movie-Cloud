@@ -1,0 +1,18 @@
+<% if (!user) { %>
+	<p>Welcome! Please <a href="/login">log in</a>.</p>
+<% } else { %>
+	<p>Hello, <%= user.USERNAME %>. View your <a href="/profile">profile</a>.</p>
+<% } %>
+	
+<% if (videos) { %>
+<ul>
+	<% for(var i in videos) {%>
+	   <li>
+	   <a href = '/video?path=<%= videos[i].PATH %>'>View <%= videos[i].TITLE %>
+	   <p> By <%= videos[i].USERID %> </p>
+	   </li>
+	   </br>
+	<% } %>
+</ul>
+<% } %>
+
